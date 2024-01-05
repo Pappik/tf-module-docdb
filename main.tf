@@ -43,9 +43,9 @@ resource "aws_docdb_cluster" "docdb" {
 
 resource "aws_docdb_cluster_instance" "cluster_instances" {
   count              = var.number_of_instances
-  identifier         = "${var.env}-docdb_cluster_instances-${count.index + 1 }"
+  identifier         = "${var.env}-docdb-cluster-instances-${count.index + 1 }"
   cluster_identifier = aws_docdb_cluster.docdb.id
   instance_class     = "db.r5.large"
 
-  tags = merge(local.common_tags, { Name = "${var.env}-docdb_cluster_instances-${count.index + 1 }"} )
+  tags = merge(local.common_tags, { Name = "${var.env}-docdb-cluster-instances-${count.index + 1 }"} )
 }
