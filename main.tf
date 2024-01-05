@@ -30,7 +30,7 @@ resource "aws_security_group" "docdb" {
 }
 
 resource "aws_docdb_cluster" "docdb" {
-  cluster_identifier      = "${var.env}-docdb_cluster"
+  cluster_identifier      = "${var.env}-docdb-cluster"
   engine                  = "docdb"
   master_username         = "foo"
   master_password         = "mustbeeightchars"
