@@ -18,6 +18,13 @@ resource "aws_security_group" "docdb" {
     protocol    = "tcp"
     cidr_blocks = var.allow_cidr
   }
+  ingress {
+    description = "ssh"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = var.allow_cidr
+  }
 
   egress {
     from_port   = 0
