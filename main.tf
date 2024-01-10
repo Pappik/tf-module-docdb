@@ -33,7 +33,7 @@ resource "aws_security_group" "docdb" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags = merge(local.common_tags, { Name = "${var.env}-docdb_security_group"} )
+  tags = merge(local.common_tags, { Name = "${var.env}-docdb_sg"} )
 }
 
 resource "aws_docdb_cluster" "docdb" {
