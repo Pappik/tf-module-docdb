@@ -9,7 +9,7 @@ resource "aws_docdb_subnet_group" "default" {
 resource "aws_security_group" "docdb" {
   name        = "${var.env}-docdb_security_group"
   description = "${var.env}-docdb_security_group"
-  vpc_id      = "vpc-0e5bfac5e36757e8a"
+  vpc_id      = "vpc-05a32df54039d002a"
 
   ingress {
     description = "Mongodb"
